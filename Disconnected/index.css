@@ -3,6 +3,10 @@
 /*                     Web Browser Game by ??????? ?????                      */
 /* __________________________________________________________________________ */
 
+/*
+/* box-shadow: 0 0 3rem 2rem #6ff, 0 0 30rem 5rem #11f;
+/*
+
 /* ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾ */
 /*            ID Reference            */
 /*                                    */
@@ -49,6 +53,48 @@
   50% {opacity: 1;}
   90% {opacity: 0;}
   100% {left: 95%; opacity: 0;}
+}
+
+@keyframes cube-ani-1 { /* Red */
+  0% {  transform: rotateX(0deg) rotateY(45deg) translateZ(5rem)
+    rotate3d(2, 0, 0, 180deg);}
+  100% {transform: rotateX(0deg) rotateY(45deg) translateZ(5rem)
+    rotate3d(2, 0, 0, -180deg);}
+}
+
+@keyframes cube-ani-2 { /* Yellow */
+  0% {transform: rotateX(-180deg) rotateY(-45deg) translateZ(5rem)
+    rotate3d(2, 0, 0, 180deg);}
+  100% {transform: rotateX(-180deg) rotateY(-45deg) translateZ(5rem)
+    rotate3d(2, 0, 0, -180deg);}
+}
+
+@keyframes cube-ani-3 { /* Blue */
+  0% {transform: rotateX(0deg) rotateY(-45deg) translateZ(5rem)
+    rotate3d(2, 0, 0, 180deg);}
+  100% {transform: rotateX(0deg) rotateY(-45deg) translateZ(5rem)
+    rotate3d(2, 0, 0, -180deg);}
+}
+
+@keyframes cube-ani-4 { /* Green */
+  0% {transform: rotateX(-180deg) rotateY(45deg) translateZ(5rem)
+    rotate3d(2, 0, 0, 180deg);}
+  100% {transform: rotateX(-180deg) rotateY(45deg) translateZ(5rem)
+    rotate3d(2, 0, 0, -180deg);}
+}
+
+@keyframes cube-ani-5 { /* Cyan */
+  0% {transform: rotateX(90deg) rotateZ(45deg) translateZ(5rem)
+    rotate3d(2, 0, 0, 180deg);}
+  100% {transform: rotateX(90deg) rotateZ(45deg) translateZ(5rem)
+    rotate3d(2, 0, 0, -180deg);}
+}
+
+@keyframes cube-ani-6 { /* Magenta */
+  0% {transform: rotateX(-90deg) rotateZ(-45deg) translateZ(5rem)
+    rotate3d(2, 0, 0, 180deg);}
+  100% {transform: rotateX(-90deg) rotateZ(-45deg) translateZ(5rem)
+    rotate3d(2, 0, 0, -180deg);}
 }
 
 @keyframes frm-ani-1 {
@@ -186,12 +232,8 @@ div::after {
   position: absolute;
   transition:
     background .5s,
-    font .05s .05s,
-    height .05s .05s,
-    left .05s .05s,
     text-shadow .1s,
-    top .05s .05s,
-    width .05s .05s;
+    transform .2s linear .05s;
 }
 
 div::after {
@@ -204,12 +246,8 @@ div:hover::before,
 div:hover::after {
   transition:
     background .5s,
-    font .05s .05s,
-    height .05s .05s,
-    left .05s .05s,
     text-shadow .1s,
-    top .05s .05s,
-    width .05s .05s;
+    transform .2s linear .05s;
 }
 
 div:active,
@@ -217,12 +255,8 @@ div:active::before,
 div:active::after {
   transition:
     background .5s,
-    font .05s,
-    height .05s,
-    left .05s,
     text-shadow .1s,
-    top .05s,
-    width .05s;
+    transform .05s linear;
 }
 
 /* ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾ */
@@ -230,12 +264,20 @@ div:active::after {
 /* __________________________________ */
 
 [id*="btn"] {
-  border: 1px solid #11f;
+  /*border: 1px solid #11f;*/
   border-radius: 5rem;
-  box-shadow:
+  /*box-shadow:
     0 0 5px 0 #009,
     inset 0 0 5px #009,
-    inset -.5rem .5rem .5rem -.2rem #009;
+    inset -.5rem .5rem .5rem -.2rem #009;*/
+  box-shadow:
+    0 0 .5rem .5rem #3ff,
+    0 0 .5rem 1rem #36f,
+    0 0 5rem 1rem #33f;
+}
+
+[id*="btn"]:active {
+  transform: scale(.9, .9);
 }
 
 [id*="circ-btn"] {
@@ -271,49 +313,25 @@ div:active::after {
   width: 30%;
 }
 
-[id*="menu-btn"]:active {
-  height: 45%;
-  top: 27.5%;
-  width: 27%;
-}
-
 #menu-btn-1 {
   left: 2.5%;
-}
-
-#menu-btn-1:active {
-  left: 4%;
 }
 
 #menu-btn-2 {
   left: 35%;
 }
 
-#menu-btn-2:active {
-  left: 36.5%;
-}
-
 #menu-btn-3 {
   left: 67.5%;
 }
 
-#menu-btn-3:active {
-  left: 69%;
-}
-
 #play-btn-1 {
-  animation: play-ani-1 4s linear infinite alternate;
-  height: 10%;
-  left: 40%;
-  top: 72.5%;
-  width: 20%;
+  height: 100%;
+  width: 100%;
 }
 
 #play-btn-1:active {
-  height: 9%;
-  left: 41%;
-  top: 73%;
-  width: 18%;
+  animation: none;
 }
 
 /* ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾ */
@@ -333,6 +351,58 @@ div:active::after {
   top: 50%;
   transform: translate(-50%, -50%);
   width: 1px;
+}
+
+/*[id*="cube-eff"],*/
+#cube-eff-1,
+#cube-eff-2,
+#cube-eff-3,
+#cube-eff-4,
+#cube-eff-5,
+#cube-eff-6 {
+  backface-visibility: hidden;
+  box-shadow: 0 0 2.5rem #009,
+    inset 0 0 2.5rem #000;
+  width: 10rem;
+  height: 10rem;
+  top: 10rem;
+  left: 20rem;
+}
+
+#cube-eff-1 {
+  animation: cube-ani-1 4s linear infinite;
+  background: #f00;
+  border: 1px solid #f00;
+}
+
+#cube-eff-2 {
+  animation: cube-ani-2 4s linear infinite;
+  background: #ff0;
+  border: 1px solid #ff0;
+}
+
+#cube-eff-3 {
+  animation: cube-ani-3 4s linear infinite;
+  border: 1px solid #00f;
+  background: #00f;
+}
+
+#cube-eff-4 {
+  animation: cube-ani-4 4s linear infinite;
+  border: 1px solid #0f0;
+  background: #0f0;
+}
+
+#cube-eff-5 {
+  animation: cube-ani-5 4s linear infinite;
+  border: 1px solid #0ff;
+  background: #0ff;
+}
+
+#cube-eff-6 {
+  animation: cube-ani-6 4s linear infinite;
+  border: 1px solid #f0f;
+  background: #f0f;
 }
 
 [id*="line-eff"] {
@@ -383,12 +453,12 @@ div:active::after {
 
 [id*="frm"] {
   animation: frm-ani-1 4s linear infinite alternate;
-  border: 1px solid #11f;
-  box-shadow: 0 0 5px #009, inset 0 0 5px #009;
 }
 
 #menu-frm-1 {
+  border: 1px solid #11f;
   border-radius: 5rem;
+  box-shadow: 0 0 5px #009, inset 0 0 5px #009;
   height: 10%;
   left: 25%;
   top: 12.5%;
@@ -396,11 +466,21 @@ div:active::after {
 }
 
 #screen-frm-1 {
+  border: 1px solid #11f;
   border-radius: 5rem;
+  box-shadow: 0 0 5px #009, inset 0 0 5px #009;
   height: 95%;
   left: 2.5%;
   top: 2.5%;
   width: 95%;
+}
+
+#play-frm-1 {
+  animation: play-ani-1 4s linear infinite alternate;
+  height: 10%;
+  left: 40%;
+  top: 72.5%;
+  width: 20%;
 }
 
 /* ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾ */
@@ -491,10 +571,6 @@ div:active::after {
   width: 100%;
 }
 
-[id*="menu-txt"]:active {
-  font: 2.25rem/4.5rem consolas;
-}
-
 #title-txt-1 {
   animation: title-ani-1 4s linear infinite alternate;
   font: 15rem/20rem consolas;
@@ -526,8 +602,4 @@ div:active::after {
   height: 100%;
   text-align: center;
   width: 100%;
-}
-
-#play-txt-1:active {
-  font: 4.5rem/9rem consolas;
 }
