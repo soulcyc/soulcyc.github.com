@@ -1,0 +1,122 @@
+<!-- ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾ -->
+<!--                        Disconnected | index.html                        -->
+<!--                    Web Browser Game by ??????? ?????                    -->
+<!-- _______________________________________________________________________ -->
+
+<!-- ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾ -->
+<!--          Div Reference          -->
+<!--                                 -->
+<!-- Attribute                       -->
+<!--   id       ( name-type-number ) -->
+<!--   data-on  ( 0/1              ) -->
+<!--   onclick  ( D.click(id)      ) -->
+<!-- _______________________________ -->
+
+<!-- ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾ -->
+<!--          ID Reference           -->
+<!--                                 -->
+<!-- Name                            -->
+<!--   bar                           -->
+<!--   line                          -->
+<!--   logline                       -->
+<!--   menu                          -->
+<!--   play                          -->
+<!--   screen                        -->
+<!--   title                         -->
+<!--                                 -->
+<!-- Type                            -->
+<!--   ani  ( Animation )            -->
+<!--   btn  ( Button    )            -->
+<!--   eff  ( Effect    )            -->
+<!--   frm  ( Frame     )            -->
+<!--   icn  ( Icon      )            -->
+<!--   txt  ( Text      )            -->
+<!--                                 -->
+<!-- Number                          -->
+<!--   1                             -->
+<!--   2                             -->
+<!--   3                             -->
+<!--   4                             -->
+<!--   5                             -->
+<!--   6                             -->
+<!--   7                             -->
+<!--   8                             -->
+<!-- _______________________________ -->
+
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <title>Disconnected | Web Game</title>
+    <link rel="shortcut icon" href="favicon.png">
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+  </head>
+  <body>
+    
+    <!-- Screen boundary -->
+    <div id="screen-frm-1"></div>
+    <div id="screen-frm-2"></div>
+    
+    <div id="circ-btn-1"></div>
+    <div id="circ-btn-2"></div>
+    <div id="circ-btn-3"></div>
+    <div id="circ-btn-4"></div>
+    
+    <!-- Main menu -->
+    <div id="menu-frm-1">
+      <div id="menu-btn-1" data-on="1" onclick="D.click(id)">
+        <div id="menu-icn-1"></div>
+        <div id="menu-txt-1">
+          Home
+        </div>
+      </div>
+      <div id="menu-btn-2" data-on="0" onclick="D.click(id)">
+        <div id="menu-icn-2"></div>
+        <div id="menu-txt-2">
+          About
+        </div>
+      </div>
+      <div id="menu-btn-3" data-on="0" onclick="D.click(id)">
+        <div id="menu-icn-3"></div>
+        <div id="menu-txt-3">
+          Credits
+        </div>
+      </div>
+    </div>
+    
+    <!-- Game title -->
+    <div id="title-txt-1">
+      Disconnected
+    </div>
+    
+    <!-- Game loglines -->
+    <div id="logline-txt-1">
+      Access the isolation&nbsp;
+    </div>
+    <div id="logline-txt-2">
+      Reconnect the links&nbsp;
+    </div>
+    <div id="logline-txt-3">
+      Uncover what was lost&nbsp;
+    </div>
+
+    <!-- Start game button -->
+    <div id="play-btn-1" onclick="D.click(id)">
+      <div id="play-txt-1">
+        Play
+      </div>
+    </div>
+    
+    <!-- Special effects -->
+    <div id="bar-eff-1"></div>
+    <div id="line-eff-1"></div>
+    <div id="line-eff-2"></div>
+    <div id="line-eff-3"></div>
+    <div id="line-eff-4"></div>
+    <div id="line-eff-5"></div>
+    <div id="line-eff-6"></div>
+    <div id="line-eff-7"></div>
+    <div id="line-eff-8"></div>
+  </body>
+</html>

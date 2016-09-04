@@ -1,0 +1,533 @@
+/* ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾ */
+/*                          Disconnected | index.css                          */
+/*                     Web Browser Game by ??????? ?????                      */
+/* __________________________________________________________________________ */
+
+/* ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾ */
+/*            ID Reference            */
+/*                                    */
+/* Name                               */
+/*   bar                              */
+/*   line                             */
+/*   logline                          */
+/*   menu                             */
+/*   play                             */
+/*   screen                           */
+/*   title                            */
+/*                                    */
+/* Type                               */
+/*   ani  ( Animation )               */
+/*   btn  ( Button    )               */
+/*   eff  ( Effect    )               */
+/*   frm  ( Frame     )               */
+/*   icn  ( Icon      )               */
+/*   txt  ( Text      )               */
+/*                                    */
+/* Number                             */
+/*   1                                */
+/*   2                                */
+/*   3                                */
+/*   4                                */
+/*   5                                */
+/*   6                                */
+/*   7                                */
+/*   8                                */
+/* __________________________________ */
+
+/* ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾ */
+/*        Animation Keyframes         */
+/* __________________________________ */
+
+@keyframes btn-ani-1 {
+  0% {opacity: 1;}
+  100% {opacity: .25;}
+}
+
+@keyframes bar-ani-1 {
+  0% {left: 5%; opacity: 0;}
+  10% {opacity: 0;}
+  50% {opacity: 1;}
+  90% {opacity: 0;}
+  100% {left: 95%; opacity: 0;}
+}
+
+@keyframes frm-ani-1 {
+  0% {opacity: 1;}
+  100% {opacity: .25;}
+}
+
+@keyframes line-ani-1 {
+  0% {left: 100%; opacity: 0; top: 50%;}
+  3% {opacity: 0;}
+  10% {opacity: 1;}
+  17% {opacity: 0;}
+  20% {left: 0;top: 50%;}
+  20.1% {left: 100%; top: 90%;}
+  23% {opacity: 0;}
+  30% {opacity: 1;}
+  37% {opacity: 0;}
+  40% {left: 0; top: 90%;}
+  40.1% {left: 100%; top: 10%;}
+  43% {opacity: 0;}
+  50% {opacity: 1;}
+  57% {opacity: 0;}
+  60% {left: 0; top: 10%;}
+  60.1% {left: 100%; top: 25%;}
+  63% {opacity: 0;}
+  70% {opacity: 1;}
+  77% {opacity: 0;}
+  80% {left: 0; top: 25%;}
+  80.1% {left: 100%; top: 65%;}
+  83% {opacity: 0;}
+  90% {opacity: 1;}
+  97% {opacity: 0;}
+  100% {left: 0; opacity: 0; top: 65%;}
+}
+
+@keyframes logline-ani-1 {
+  0% {opacity: .5; z-index: 1;}
+  16.6% {opacity: 0; z-index: 1;}
+  16.7% {z-index: 0;}
+  83.3% {opacity: 0; z-index: 0;}
+  83.4% {z-index: 1;}
+  100% {opacity: .5; z-index: 1;}
+}
+
+@keyframes logline-ani-2 {
+  0% {opacity: 0; z-index: 0;}
+  .1% {z-index: 1;}
+  16.6% {opacity: .5;}
+  33.3% {opacity: 0; z-index: 1;}
+  33.4% {z-index: 0;}
+  100% {opacity: 0;}
+}
+
+@keyframes logline-ani-3 {
+  0% {opacity: 0;}
+  50% {opacity: 0;}
+  50.1% {opacity: 1;}
+  100% {opacity: 1;}
+}
+
+@keyframes play-ani-1 {
+  0% {opacity: 1; transform: scale(1, 1);}
+  100% {opacity: .25; transform: scale(1.1, 1.1);}
+}
+
+@keyframes title-ani-1 {
+  0% {letter-spacing: 0; opacity: 1;}
+  100% {letter-spacing: .5vw; opacity: .25;}
+}
+
+@keyframes title-ani-2 {
+  0% {opacity: 0;}
+  45% {opacity: 0;}
+  45.5% {opacity: 1;}
+  46% {opacity: 0;}
+  46.5% {opacity: 1;}
+  53.5% {opacity: 1;}
+  54% {opacity: 0;}
+  54.5% {opacity: 1;}
+  55% {opacity: 0;}
+  100% {opacity: 0;}
+}
+
+/* ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾ */
+/*            Layout Style            */
+/*                                    */
+/* Display window                     */
+/*   16:9 aspect ratio                */
+/*   Center fit in viewport           */
+/*                                    */
+/* 1rem equals                        */
+/*   1% of the body height            */
+/*   .5625% of the body width         */
+/*                                    */
+/* Colors                             */
+/*   #009  ( Medium blue  )           */
+/*   #111  ( Medium black )           */
+/*   #11f  ( Bright blue  )           */
+/* __________________________________ */
+
+/* Viewport aspect ratio < 16:9 */
+html {
+  font: .5625vw/.5625vw consolas;
+}
+
+body {
+  background: #111;
+  height: 56.25vw;
+  margin: calc(50vh - 28.125vw) 0;
+  position: fixed;
+  width: 100vw;
+}
+
+/* Viewport aspect ratio >= 16:9 */
+@media all and (max-height: 56.25vw) {
+  html {
+    font: 1vh/1vh consolas;
+  }
+
+  body {
+    height: 100vh;
+    margin: 0 calc(50vw - 50vh / .5625);
+    width: calc(100vh / .5625);
+  }
+}
+
+/* ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾ */
+/*            Common Style            */
+/* __________________________________ */
+
+div,
+div::before,
+div::after {
+  box-sizing: border-box;
+  position: absolute;
+  transition:
+    background .5s,
+    font .05s .05s,
+    height .05s .05s,
+    left .05s .05s,
+    text-shadow .1s,
+    top .05s .05s,
+    width .05s .05s;
+}
+
+div::after {
+  left: 0;
+  width: 100%;
+}
+
+div:hover,
+div:hover::before,
+div:hover::after {
+  transition:
+    background .5s,
+    font .05s .05s,
+    height .05s .05s,
+    left .05s .05s,
+    text-shadow .1s,
+    top .05s .05s,
+    width .05s .05s;
+}
+
+div:active,
+div:active::before,
+div:active::after {
+  transition:
+    background .5s,
+    font .05s,
+    height .05s,
+    left .05s,
+    text-shadow .1s,
+    top .05s,
+    width .05s;
+}
+
+/* ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾ */
+/*            Button Style            */
+/* __________________________________ */
+
+[id*="btn"] {
+  border: 1px solid #11f;
+  border-radius: 5rem;
+  box-shadow:
+    0 0 5px 0 #009,
+    inset 0 0 5px #009,
+    inset -.5rem .5rem .5rem -.2rem #009;
+}
+
+[id*="circ-btn"] {
+  animation: btn-ani-1 4s linear infinite alternate;
+  height: 5rem;
+  width: 5rem;
+}
+
+#circ-btn-1 {
+  bottom: calc(21.875% - 2.5rem);
+  left: calc(15% - 2.5rem);
+}
+
+#circ-btn-2 {
+  bottom: calc(21.875% - 2.5rem);
+  right: calc(15% - 2.5rem);
+}
+
+#circ-btn-3 {
+  bottom: calc(21.875% - 2.5rem);
+  left: calc(27.5% - 2.5rem);
+}
+
+#circ-btn-4 {
+  bottom: calc(21.875% - 2.5rem);
+  right: calc(27.5% - 2.5rem);
+}
+
+[id*="menu-btn"] {
+  background: radial-gradient(#009, #111 40%) 0/17.5% 100% no-repeat;
+  height: 50%;
+  top: 25%;
+  width: 30%;
+}
+
+[id*="menu-btn"]:active {
+  height: 45%;
+  top: 27.5%;
+  width: 27%;
+}
+
+#menu-btn-1 {
+  left: 2.5%;
+}
+
+#menu-btn-1:active {
+  left: 4%;
+}
+
+#menu-btn-2 {
+  left: 35%;
+}
+
+#menu-btn-2:active {
+  left: 36.5%;
+}
+
+#menu-btn-3 {
+  left: 67.5%;
+}
+
+#menu-btn-3:active {
+  left: 69%;
+}
+
+#play-btn-1 {
+  animation: play-ani-1 4s linear infinite alternate;
+  height: 10%;
+  left: 40%;
+  top: 72.5%;
+  width: 20%;
+}
+
+#play-btn-1:active {
+  height: 9%;
+  left: 41%;
+  top: 73%;
+  width: 18%;
+}
+
+/* ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾ */
+/*            Effect Style            */
+/* __________________________________ */
+
+[id*="eff"] {
+  mouse-events: none;
+}
+
+#bar-eff-1 {
+  animation: bar-ani-1 4s linear infinite alternate;
+  background: #11f;
+  box-shadow: 0 0 5px #009;
+  height: 95%;
+  opacity: 0;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 1px;
+}
+
+[id*="line-eff"] {
+  border: 1px solid #11f;
+  border-radius: 5rem;
+  box-shadow: 0 0 5px #009, inset 0 0 5px #009;
+  height: .5%;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  width: 3%;
+}
+
+#line-eff-1 {
+  animation: line-ani-1 16s linear infinite;
+}
+
+#line-eff-2 {
+  animation: line-ani-1 16s linear 4s infinite reverse;
+}
+
+#line-eff-3 {
+  animation: line-ani-1 16s linear 8s infinite;
+}
+
+#line-eff-4 {
+  animation: line-ani-1 16s linear 12s infinite reverse;
+}
+
+#line-eff-5 {
+  animation: line-ani-1 16s linear 2s infinite;
+}
+
+#line-eff-6 {
+  animation: line-ani-1 16s linear 6s infinite reverse;
+}
+
+#line-eff-7 {
+  animation: line-ani-1 16s linear 10s infinite;
+}
+
+#line-eff-8 {
+  animation: line-ani-1 16s linear 14s infinite reverse;
+}
+
+/* ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾ */
+/*            Frame Style             */
+/* __________________________________ */
+
+[id*="frm"] {
+  animation: frm-ani-1 4s linear infinite alternate;
+  border: 1px solid #11f;
+  box-shadow: 0 0 5px #009, inset 0 0 5px #009;
+}
+
+#menu-frm-1 {
+  border-radius: 5rem;
+  height: 10%;
+  left: 25%;
+  top: 12.5%;
+  width: 50%;
+}
+
+#screen-frm-1 {
+  border-radius: 5rem;
+  height: 95%;
+  left: 2.5%;
+  top: 2.5%;
+  width: 95%;
+}
+
+/* ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾ */
+/*             Icon Style             */
+/* __________________________________ */
+
+[id*="icn"] {
+  border: 1px solid #11f;
+  border-radius: 5rem;
+  box-shadow:
+    0 0 5px 0 #009,
+    inset 0 0 5px #009,
+    inset -.5rem .5rem .5rem -.2rem #009;
+}
+
+[id*="menu-icn"] {
+  height: 100%;
+  width: 17.5%;
+}
+
+[data-on="0"] > [id*="menu-icn"] {
+  background: #111;
+}
+
+/* ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾ */
+/*             Text Style             */
+/* __________________________________ */
+
+[id*="txt"] {
+  color: #11f;
+  cursor: default;
+  text-shadow: .25rem .25rem .5rem #009;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+[id*="txt"]:hover {
+  text-shadow: .5rem .5rem 1rem #009;
+}
+
+[id*="logline-txt"] {
+  font: 5rem/10rem consolas;
+  height: 10%;
+  left: 10%;
+  opacity: 0;
+  text-align: center;
+  top: 52.5%;
+  width: 80%;
+}
+
+[id*="logline-txt"]::before {
+  text-shadow: none;
+}
+
+#logline-txt-1 {
+  animation: logline-ani-1 24s linear infinite;
+}
+
+#logline-txt-1::before {
+  animation: logline-ani-3 2s linear infinite;
+  content: "Access the isolation_";
+}
+
+#logline-txt-2 {
+  animation: logline-ani-2 24s linear 4s infinite;
+}
+
+#logline-txt-2::before {
+  animation: logline-ani-3 2s linear infinite;
+  content: "Reconnect the links_";
+}
+
+#logline-txt-3 {
+  animation: logline-ani-2 24s linear 12s infinite;
+}
+
+#logline-txt-3::before {
+  animation: logline-ani-3 2s linear infinite;
+  content: "Uncover what was lost_";
+}
+
+[id*="menu-txt"] {
+  font: 2.5rem/5rem consolas;
+  height: 100%;
+  text-indent: 25%;
+  width: 100%;
+}
+
+[id*="menu-txt"]:active {
+  font: 2.25rem/4.5rem consolas;
+}
+
+#title-txt-1 {
+  animation: title-ani-1 4s linear infinite alternate;
+  font: 15rem/20rem consolas;
+  height: 20%;
+  left: 10%;
+  text-align: center;
+  top: 27.5%;
+  width: 80%;
+}
+
+#title-txt-1::before,
+#title-txt-1::after {
+  background: #111;
+  opacity: 0;
+}
+
+#title-txt-1::before {
+  animation: title-ani-2 16s linear infinite;
+  content: "Dis onnected";
+}
+
+#title-txt-1::after {
+  animation: title-ani-2 16s linear 8s infinite;
+  content: "Disconne ted";
+}
+
+#play-txt-1 {
+  font: 5rem/10rem consolas;
+  height: 100%;
+  text-align: center;
+  width: 100%;
+}
+
+#play-txt-1:active {
+  font: 4.5rem/9rem consolas;
+}
