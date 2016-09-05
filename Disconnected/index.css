@@ -3,10 +3,6 @@
 /*                     Web Browser Game by ??????? ?????                      */
 /* __________________________________________________________________________ */
 
-/*
-/* box-shadow: 0 0 3rem 2rem #6ff, 0 0 30rem 5rem #11f;
-/*
-
 /* ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾ */
 /*            ID Reference            */
 /*                                    */
@@ -97,6 +93,11 @@
     rotate3d(2, 0, 0, -180deg);}
 }
 
+@keyframes edge-ani-1 {
+  0% {opacity: 1;}
+  100% {opacity: .25;}
+}
+
 @keyframes frm-ani-1 {
   0% {opacity: 1;}
   100% {opacity: .25;}
@@ -158,6 +159,38 @@
 @keyframes play-ani-1 {
   0% {opacity: 1; transform: scale(1, 1);}
   100% {opacity: .25; transform: scale(1.1, 1.1);}
+}
+
+@keyframes spark-ani-1 {
+  0% {opacity: 0;top: 5rem;  left: 5rem; transform: rotateZ(-90deg);}
+  5% {opacity: 1;top: 5rem;}
+  15% {top: 15rem; transform: rotateZ(-90deg);}
+  23% {top: 15rem; transform: rotateZ(0deg);}
+  33% {top: 25rem; transform: rotateZ(0deg);}
+  41% {top: 25rem; transform: rotateZ(90deg);}
+  41.1% {top: 35rem; transform: rotateZ(-90deg);}
+  49% {top: 35rem; transform: rotateZ(-180deg);}
+  59% {left: 5rem; top: 45rem; transform: rotateZ(-180deg);}
+  59.1% {left: -5rem; top: 45rem; transform: rotateZ(0deg);}
+  67% {opacity: 1; transform: rotateZ(90deg);}
+  72% {opacity: 0; left: -5rem; top: 45rem; transform: rotateZ(90deg);}
+  100% {opacity: 0;top: 5rem;  left: 5rem; transform: rotateZ(-90deg);}
+}
+
+@keyframes spark-ani-2 {
+  0% {opacity: 0;top: 5rem; right: 5rem; transform: rotateZ(90deg);}
+  5% {opacity: 1;top: 5rem;}
+  15% {top: 15rem; transform: rotateZ(90deg);}
+  23% {top: 15rem; transform: rotateZ(0deg);}
+  33% {top: 25rem; transform: rotateZ(0deg);}
+  41% {top: 25rem; transform: rotateZ(-90deg);}
+  41.1% {top: 35rem; transform: rotateZ(90deg);}
+  49% {top: 35rem; transform: rotateZ(180deg);}
+  59% {right: 5rem; top: 45rem; transform: rotateZ(180deg);}
+  59.1% {right: -5rem; top: 45rem; transform: rotateZ(0deg);}
+  67% {opacity: 1; transform: rotateZ(-90deg);}
+  72% {opacity: 0; right: -5rem; top: 45rem; transform: rotateZ(-90deg);}
+  100% {opacity: 0;top: 5rem; right: 5rem; transform: rotateZ(90deg);}
 }
 
 @keyframes title-ani-1 {
@@ -447,15 +480,48 @@ div:active::after {
   animation: line-ani-1 16s linear 14s infinite reverse;
 }
 
+[id*="spark-eff"] {
+  width: 10rem;
+  opacity: 0;
+  z-index: 3;
+}
+
+[id*="spark-eff"]::before {
+  background: #3ff;
+  border-radius: 5rem;
+  box-shadow:
+    0 0 .3rem .3rem #3ff,
+    0 0 .3rem .6rem #36f,
+    0 0 3rem .3rem #33f;
+  content: "";
+  width: 2px;
+  height: 2px;
+  transform: translate(-1px, -1px);
+}
+
+#spark-eff-1 {
+  animation: spark-ani-1 3s linear infinite;
+}
+
+#spark-eff-1::before {
+  left: 100%;
+}
+
+#spark-eff-2 {
+  animation: spark-ani-2 3s linear infinite;
+  right: 0;
+}
+
 /* ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾ */
 /*            Frame Style             */
 /* __________________________________ */
 
 [id*="frm"] {
-  animation: frm-ani-1 4s linear infinite alternate;
+  z-index: 2;
 }
 
 #menu-frm-1 {
+  animation: frm-ani-1 4s linear infinite alternate;
   border: 1px solid #11f;
   border-radius: 5rem;
   box-shadow: 0 0 5px #009, inset 0 0 5px #009;
@@ -466,6 +532,7 @@ div:active::after {
 }
 
 #screen-frm-1 {
+  animation: frm-ani-1 4s linear infinite alternate;
   border: 1px solid #11f;
   border-radius: 5rem;
   box-shadow: 0 0 5px #009, inset 0 0 5px #009;
@@ -473,6 +540,115 @@ div:active::after {
   left: 2.5%;
   top: 2.5%;
   width: 95%;
+}
+
+[id*="edge-frm"] {
+  overflow: hidden;
+}
+
+[id*="edge-frm"]::before {
+  border: 1px solid #11f;
+  border-radius: 5rem;
+  box-shadow: 0 0 5px #009, inset 0 0 5px #009;
+  content: "";
+  height: 100%;
+  width: 100%;
+}
+
+#edge-frm-1 {
+  height: 40rem;
+  left: 0;
+  top: 0;
+  width: 20rem;
+}
+
+#edge-frm-1::before {
+  left: -50%;
+  top: -50%;
+}
+
+#edge-frm-2 {
+  height: 40rem;
+  right: 0;
+  top: 0;
+  width: 20rem;
+}
+
+#edge-frm-2::before {
+  left: 50%;
+  top: -50%;
+}
+
+#edge-frm-3 {
+  height: 20rem;
+  left: 10rem;
+  top: 10rem;
+  width: 10rem;
+}
+
+#edge-frm-3::before {
+  left: -50%;
+  top: 0;
+}
+
+#edge-frm-4 {
+  height: 20rem;
+  right: 10rem;
+  top: 10rem;
+  width: 10rem;
+}
+
+#edge-frm-4::before {
+  right: -50%;
+  top: 0;
+}
+
+#edge-frm-5 {
+  height: 10rem;
+  left: 0;
+  top: calc(25rem - 1px);
+  width: 10rem;
+}
+
+#edge-frm-5::before {
+  left: 50%;
+  top: 50%;
+}
+
+#edge-frm-6 {
+  height: 10rem;
+  right: 0;
+  top: calc(25rem - 1px);
+  width: 10rem;
+}
+
+#edge-frm-6::before {
+  right: 50%;
+  top: 50%;
+}
+
+#edge-frm-7 {
+  height: 20rem;
+  left: 1px;
+  top: calc(35rem - 1px);
+  width: 10rem;
+}
+
+#edge-frm-7::before {
+  left: -50%;
+  top: -25%;
+}
+
+#edge-frm-8 {
+  height: 20rem;
+  right: 1px;
+  top: calc(35rem - 1px);
+  width: 10rem;
+}
+
+#edge-frm-8::before {
+  right: -50%;
+  top: -25%;
 }
 
 #play-frm-1 {
