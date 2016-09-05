@@ -109,22 +109,22 @@
   10% {opacity: 1;}
   17% {opacity: 0;}
   20% {left: 0;top: 50%;}
-  20.1% {left: 100%; top: 90%;}
+  20.01% {left: 100%; top: 90%;}
   23% {opacity: 0;}
   30% {opacity: 1;}
   37% {opacity: 0;}
   40% {left: 0; top: 90%;}
-  40.1% {left: 100%; top: 10%;}
+  40.01% {left: 100%; top: 10%;}
   43% {opacity: 0;}
   50% {opacity: 1;}
   57% {opacity: 0;}
   60% {left: 0; top: 10%;}
-  60.1% {left: 100%; top: 25%;}
+  60.01% {left: 100%; top: 25%;}
   63% {opacity: 0;}
   70% {opacity: 1;}
   77% {opacity: 0;}
   80% {left: 0; top: 25%;}
-  80.1% {left: 100%; top: 65%;}
+  80.01% {left: 100%; top: 65%;}
   83% {opacity: 0;}
   90% {opacity: 1;}
   97% {opacity: 0;}
@@ -134,9 +134,9 @@
 @keyframes logline-ani-1 {
   0% {opacity: .5; z-index: 1;}
   16.6% {opacity: 0; z-index: 1;}
-  16.7% {z-index: 0;}
+  16.61% {z-index: 0;}
   83.3% {opacity: 0; z-index: 0;}
-  83.4% {z-index: 1;}
+  83.31% {z-index: 1;}
   100% {opacity: .5; z-index: 1;}
 }
 
@@ -145,7 +145,7 @@
   .1% {z-index: 1;}
   16.6% {opacity: .5;}
   33.3% {opacity: 0; z-index: 1;}
-  33.4% {z-index: 0;}
+  33.31% {z-index: 0;}
   100% {opacity: 0;}
 }
 
@@ -168,10 +168,10 @@
   23% {top: 15rem; transform: rotateZ(0deg);}
   33% {top: 25rem; transform: rotateZ(0deg);}
   41% {top: 25rem; transform: rotateZ(90deg);}
-  41.1% {top: 35rem; transform: rotateZ(-90deg);}
+  41.01% {top: 35rem; transform: rotateZ(-90deg);}
   49% {top: 35rem; transform: rotateZ(-180deg);}
   59% {left: 5rem; top: 45rem; transform: rotateZ(-180deg);}
-  59.1% {left: -5rem; top: 45rem; transform: rotateZ(0deg);}
+  59.01% {left: -5rem; top: 45rem; transform: rotateZ(0deg);}
   67% {opacity: 1; transform: rotateZ(90deg);}
   72% {opacity: 0; left: -5rem; top: 45rem; transform: rotateZ(90deg);}
   100% {opacity: 0;top: 5rem;  left: 5rem; transform: rotateZ(-90deg);}
@@ -184,10 +184,10 @@
   23% {top: 15rem; transform: rotateZ(0deg);}
   33% {top: 25rem; transform: rotateZ(0deg);}
   41% {top: 25rem; transform: rotateZ(-90deg);}
-  41.1% {top: 35rem; transform: rotateZ(90deg);}
+  41.01% {top: 35rem; transform: rotateZ(90deg);}
   49% {top: 35rem; transform: rotateZ(180deg);}
   59% {right: 5rem; top: 45rem; transform: rotateZ(180deg);}
-  59.1% {right: -5rem; top: 45rem; transform: rotateZ(0deg);}
+  59.01% {right: -5rem; top: 45rem; transform: rotateZ(0deg);}
   67% {opacity: 1; transform: rotateZ(-90deg);}
   72% {opacity: 0; right: -5rem; top: 45rem; transform: rotateZ(-90deg);}
   100% {opacity: 0;top: 5rem; right: 5rem; transform: rotateZ(90deg);}
@@ -538,6 +538,7 @@ div:active::after {
   box-shadow: 0 0 5px #009, inset 0 0 5px #009;
   height: 95%;
   left: 2.5%;
+  pointer-events: none;
   top: 2.5%;
   width: 95%;
 }
